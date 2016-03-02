@@ -9,10 +9,7 @@ namespace RefaktoringFowler.Core.VyjmoutMetodu
         public void TiskUctu(double castka)
         {
             TiskZahlavi();
-
-            //tisk polozky
-            Console.WriteLine("Jmeno: " + _jmeno);
-            Console.Write("Castka: " + castka);
+            TiskPolozky(castka);
         }
 
         private void TiskZahlavi()
@@ -20,6 +17,13 @@ namespace RefaktoringFowler.Core.VyjmoutMetodu
             Console.WriteLine("******************************");
             Console.WriteLine("***** Zakaznik ma platit *****");
             Console.WriteLine("******************************");
+        }
+
+        private void TiskPolozky(double castka)
+        {
+            //tisk polozky
+            Console.WriteLine("Jmeno: " + _jmeno);
+            Console.Write("Castka: " + castka);
         }
     }
 }
