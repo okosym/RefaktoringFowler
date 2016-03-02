@@ -26,10 +26,7 @@ namespace RefaktoringFowler.Core.VyjmoutMetodu
         {
             double zaplatit = 0.0;
 
-            // tisk zahlavi
-            Console.WriteLine("******************************");
-            Console.WriteLine("***** Zakaznik ma platit *****");
-            Console.WriteLine("******************************");
+            TiskZahlavi();
 
             // vypocet castky k zaplaceni
             foreach (var zakazka in _zakazky)
@@ -40,6 +37,13 @@ namespace RefaktoringFowler.Core.VyjmoutMetodu
             // tisk polozky
             Console.WriteLine("Jmeno: " + _jmeno);
             Console.WriteLine("Castka: " + zaplatit);
+        }
+
+        private void TiskZahlavi()
+        {
+            Console.WriteLine("******************************");
+            Console.WriteLine("***** Zakaznik ma platit *****");
+            Console.WriteLine("******************************");
         }
     }
 }
