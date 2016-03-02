@@ -279,3 +279,6 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+RefaktoringFowler.Core/Properties/AssemblyInfo.cs
+RefaktoringFowler.Core/RefaktoringFowler.Core.csproj
+RefaktoringFowler.sln
