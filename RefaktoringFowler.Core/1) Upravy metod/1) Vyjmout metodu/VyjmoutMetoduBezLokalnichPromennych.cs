@@ -34,9 +34,7 @@ namespace RefaktoringFowler.Core.VyjmoutMetodu
                 zaplatit += zakazka.Castka;
             }
 
-            // tisk polozky
-            Console.WriteLine("Jmeno: " + _jmeno);
-            Console.WriteLine("Castka: " + zaplatit);
+            TiskPolozky(zaplatit);
         }
 
         private void TiskZahlavi()
@@ -44,6 +42,12 @@ namespace RefaktoringFowler.Core.VyjmoutMetodu
             Console.WriteLine("******************************");
             Console.WriteLine("***** Zakaznik ma platit *****");
             Console.WriteLine("******************************");
+        }
+
+        private void TiskPolozky(double zaplatit)
+        {
+            Console.WriteLine("Jmeno: " + _jmeno);
+            Console.WriteLine("Castka: " + zaplatit);
         }
     }
 }
