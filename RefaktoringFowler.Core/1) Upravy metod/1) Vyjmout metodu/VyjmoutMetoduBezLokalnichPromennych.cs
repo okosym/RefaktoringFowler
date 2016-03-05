@@ -24,16 +24,8 @@ namespace RefaktoringFowler.Core.VyjmoutMetodu
         
         public void TiskUctu()
         {
-            double zaplatit = 0.0;
-
             TiskZahlavi();
-
-            // vypocet castky k zaplaceni
-            foreach (var zakazka in _zakazky)
-            {
-                zaplatit += zakazka.Castka;
-            }
-
+            double zaplatit = GetZaplatit();
             TiskPolozky(zaplatit);
         }
 
@@ -48,6 +40,16 @@ namespace RefaktoringFowler.Core.VyjmoutMetodu
         {
             Console.WriteLine("Jmeno: " + _jmeno);
             Console.WriteLine("Castka: " + zaplatit);
+        }
+
+        private double GetZaplatit()
+        {
+            double zaplatit = 0.0;
+            foreach (var zakazka in _zakazky)
+            {
+                zaplatit += zakazka.Castka;
+            }
+            return zaplatit;
         }
     }
 }
