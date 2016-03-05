@@ -12,12 +12,7 @@ namespace RefaktoringFowler.Core.Vlozit_metodu
 
         public int GetHodnoceni()
         {
-            return (ViceNezPetZpozdeni()) ? 2 : 1;
-        }
-
-        private bool ViceNezPetZpozdeni()
-        {
-            return _pocetZpozdeni > 5;
+            return (_pocetZpozdeni > 5) ? 2 : 1;
         }
     }
 }
